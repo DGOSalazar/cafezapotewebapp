@@ -11,11 +11,11 @@ export function Home() {
               las montañas de Mesillas, Nayarit, bajo la sombra de un zapote centenario.
             </p>
             <div className="hero-actions">
-              <a href="#coffee-gallery" className="btn primary">
-                Conoce nuestro café
+              <a href="/history" className="btn primary">
+                Nuestra Historia
               </a>
               <a href="/quote" className="btn ghost">
-                Solicita una cotización
+                Contáctanos
               </a>
             </div>
           </div>
@@ -36,33 +36,6 @@ export function Home() {
           </div>
         </div>
       </div>
-
-      <section id="highlight-coffees" className="section highlight-section">
-        <h2>Lo que hace único a Café Zapote</h2>
-        <div className="highlight-grid">
-          <article className="highlight-card">
-            <h3>Café 100% orgánico de origen familiar</h3>
-            <p>
-              Nuestros cafetales nacen en el predio El Zapote, en Mesillas, Compostela, Nayarit (800–1200 msnm). Cuidamos cada
-              planta con métodos orgánicos y respetuosos con la tierra.
-            </p>
-          </article>
-          <article className="highlight-card">
-            <h3>Proceso artesanal de la familia Salazar</h3>
-            <p>
-              Desde la recolección hasta el tostado, el café pasa por manos de la misma familia que lo siembra. Seleccionamos
-              grano por grano para lograr cuerpo medio, notas dulces, aroma floral y final suave.
-            </p>
-          </article>
-          <article className="highlight-card">
-            <h3>Hecho para espacios con historia</h3>
-            <p>
-              Llevamos Café Zapote a cafeterías, funerarias, oficinas y hogares que buscan algo más que una taza. Queremos que
-              cada sorbo cuente una historia de familia, tierra y esperanza.
-            </p>
-          </article>
-        </div>
-      </section>
     </section>
   );
 }
