@@ -11,7 +11,7 @@ export function Home() {
               las montañas de Mesillas, Nayarit, bajo la sombra de un zapote centenario.
             </p>
             <div className="hero-actions">
-              <a href="#highlight-coffees" className="btn primary">
+              <a href="#coffee-gallery" className="btn primary">
                 Conoce nuestro café
               </a>
               <a href="/quote" className="btn ghost">
@@ -24,7 +24,7 @@ export function Home() {
           </div>
         </div>
 
-        <div className="hero-gallery">
+        <div id="coffee-gallery" className="hero-gallery">
           <div className="gallery-item">
             <img src="/WhatsApp Image 2025-11-15 at 7.01.03 PM (1).jpeg" alt="Cafetales de Café Zapote" />
           </div>
