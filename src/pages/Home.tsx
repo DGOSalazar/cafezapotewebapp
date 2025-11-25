@@ -1,14 +1,13 @@
 export function Home() {
   return (
-    <section className="page home-page">
-      <div className="hero hero-centered">
-        <div className="hero-content-centered">
-          <div className="hero-text-centered">
+    <section className="page home-page home-no-scroll">
+      <div className="hero hero-compact">
+        <div className="hero-row">
+          <div className="hero-text-compact">
             <div className="hero-badge">☕ Café 100% Orgánico</div>
-            <h1>Donde las raíces del pasado florecen en cada taza</h1>
+            <h1>Tradición que florece en cada taza</h1>
             <p>
-              Café Zapote no es una marca más de café. Somos una familia que cultiva, procesa y comparte café orgánico desde
-              las montañas de Mesillas, Nayarit, bajo la sombra de un zapote centenario.
+              Somos una familia que cultiva café orgánico desde las montañas de Mesillas, Nayarit.
             </p>
             <div className="hero-actions">
               <a href="/history" className="btn primary">
@@ -19,8 +18,8 @@ export function Home() {
               </a>
             </div>
           </div>
-          <div className="hero-image-large">
-            <img src="/topImage.jpg" alt="Taza de Café Zapote" className="hero-cup-large" />
+          <div className="hero-image-compact">
+            <img src="/topImage.jpg" alt="Taza de Café Zapote" className="hero-cup-compact" />
           </div>
         </div>
       </div>
