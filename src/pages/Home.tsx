@@ -1,9 +1,9 @@
 export function Home() {
   return (
     <section className="page home-page">
-      <div className="hero">
-        <div className="hero-content">
-          <div className="hero-text">
+      <div className="hero hero-centered">
+        <div className="hero-content-centered">
+          <div className="hero-text-centered">
             <div className="hero-badge">☕ Café 100% Orgánico</div>
             <h1>Donde las raíces del pasado florecen en cada taza</h1>
             <p>
@@ -19,20 +19,8 @@ export function Home() {
               </a>
             </div>
           </div>
-          <div className="hero-image-feature">
-            <img src="/topImage.jpg" alt="Taza de Café Zapote" className="hero-cup" />
-          </div>
-        </div>
-
-        <div id="coffee-gallery" className="hero-gallery">
-          <div className="gallery-item">
-            <img src="/WhatsApp Image 2025-11-15 at 7.01.03 PM (1).jpeg" alt="Cafetales de Café Zapote" />
-          </div>
-          <div className="gallery-item">
-            <img src="/WhatsApp Image 2025-11-15 at 4.30.02 PM (5).jpeg" alt="Cosecha manual de café" />
-          </div>
-          <div className="gallery-item">
-            <img src="/WhatsApp Image 2025-11-15 at 4.30.02 PM (4).jpeg" alt="Tueste artesanal" />
+          <div className="hero-image-large">
+            <img src="/topImage.jpg" alt="Taza de Café Zapote" className="hero-cup-large" />
           </div>
         </div>
       </div>
