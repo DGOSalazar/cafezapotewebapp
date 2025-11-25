@@ -3,6 +3,11 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 :root {
   color-scheme: light;
   /* Colores inspirados en el brand book: tonos cálidos y naturales */
@@ -29,11 +34,20 @@ body {
     linear-gradient(135deg, rgba(249, 244, 236, 0.75) 0%, rgba(245, 237, 224, 0.82) 100%),
     url('/background1.jpg') center/cover fixed;
   color: var(--text);
+  scroll-padding-top: 120px;
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .app-root {
@@ -44,6 +58,8 @@ a {
   display: flex;
   flex-direction: column;
   gap: 1.75rem;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* Header & navigation */
@@ -61,6 +77,13 @@ a {
   top: 1rem;
   backdrop-filter: blur(16px);
   z-index: 10;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.site-header.hidden {
+  transform: translateY(-150%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .brand {
@@ -238,6 +261,8 @@ a {
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid var(--border-subtle);
   box-shadow: var(--shadow-soft);
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .page-header {
@@ -356,6 +381,8 @@ a {
   flex-direction: column;
   gap: 2rem;
   margin-bottom: 2.5rem;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .hero-content {
@@ -456,6 +483,8 @@ a {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
   margin-top: 0.5rem;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .gallery-item {
@@ -776,6 +805,10 @@ a {
 }
 
 @media (max-width: 600px) {
+  body {
+    scroll-padding-top: 90px;
+  }
+
   .app-root {
     padding-inline: 1.1rem;
   }

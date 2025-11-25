@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 interface LayoutProps {
@@ -6,9 +6,38 @@ interface LayoutProps {
 }
 
 export function Layout({ children }: LayoutProps) {
+  const [isHeaderHidden, setIsHeaderHidden] = useState(false);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Solo ocultar si estamos más abajo de 100px y scrolling hacia abajo
+      if (currentScrollY > 100) {
+        if (currentScrollY > lastScrollY.current) {
+          // Scrolling down
+          setIsHeaderHidden(true);
+        } else {
+          // Scrolling up
+          setIsHeaderHidden(false);
+        }
+      } else {
+        // Cerca del top, siempre mostrar
+        setIsHeaderHidden(false);
+      }
+      
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="app-root">
-      <header className="site-header">
+      <header className={`site-header ${isHeaderHidden ? 'hidden' : ''}`}>
         <div className="brand">
           <img src="/logo-cafe-zapote.png" alt="Café Zapote" className="brand-logo" />
           <div className="brand-text">
